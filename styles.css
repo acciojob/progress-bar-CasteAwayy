@@ -1,1 +1,88 @@
-/*  your css code here. If applicable */
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+}
+.progress_bar {
+  width: 500px;
+  height: 200px;
+  /* border: 1px solid black; */
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress_bar .circles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid #e0e0e0;
+  color: #999999;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+button {
+  padding: 10px 30px;
+  background: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  line-height: 2ch;
+}
+
+.container {
+  position: relative;
+}
+
+.path {
+  position: absolute;
+  width: 95%;
+  bottom: calc(50% - 2.5px);
+  left: 12px;
+  background-color: #e0e0e0;
+  height: 5px;
+  z-index: -100;
+}
+
+.active{
+    border-color: #3498db;
+}
+
+
+button[disabled='true']{
+    background-color: #3498db69;
+}
+
+.path span{
+    width: 0%;
+    height: 100%;
+    display:  block;
+    background-color: #3498db;
+}
